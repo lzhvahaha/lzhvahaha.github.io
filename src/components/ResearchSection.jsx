@@ -36,17 +36,33 @@ const researchCards = [
 function ResearchCard({ icon, title, desc }) {
   return (
     <article
-      className="bg-white rounded-sm w-full"
+      className="bg-white rounded-lg w-full group"
       style={{
         border: '1px solid #E5E2D7',
         padding: '14px 18px',
+        transition: 'all 0.2s ease',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1)';
+        e.currentTarget.style.transform = 'translateY(-2px)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = 'none';
+        e.currentTarget.style.transform = 'translateY(0)';
       }}
     >
       {/* icon */}
-      <img src={icon} alt="" className="w-8 h-8 mb-[6px]" />
+      <img
+        src={icon}
+        alt=""
+        className="w-8 h-8 mb-2"
+        style={{ transition: 'transform 0.2s ease' }}
+        onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.1)'; }}
+        onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
+      />
 
       {/* title */}
-      <h3 className="font-serif text-[22px] leading-[130%] font-semibold text-text-primary mb-[5px]">
+      <h3 className="font-serif text-[22px] leading-[130%] font-semibold text-text-primary mb-2">
         {title}
       </h3>
 

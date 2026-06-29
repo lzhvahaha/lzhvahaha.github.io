@@ -16,6 +16,7 @@ export default function ArticleDetailPage() {
   const meta = getPostBySlug(slug);
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     // 滚动到顶部
@@ -25,11 +26,17 @@ export default function ArticleDetailPage() {
     const loader = postFiles[filePath];
 
     if (loader) {
-      loader().then((raw) => {
-        setContent(raw);
-        setLoading(false);
-      });
+      loader()
+        .then((raw) => {
+          setContent(raw);
+          setLoading(false);
+        })
+        .catch(() => {
+          setError(true);
+          setLoading(false);
+        });
     } else {
+      setError(true);
       setLoading(false);
     }
   }, [slug]);
@@ -100,6 +107,15 @@ export default function ArticleDetailPage() {
             <p className="font-serif text-text-secondary" style={{ fontSize: '16px' }}>
               加载中…
             </p>
+          ) : error ? (
+            <div className="flex flex-col" style={{ gap: 12 }}>
+              <p className="font-serif text-text-secondary" style={{ fontSize: '16px' }}>
+                文章加载失败，请稍后重试。
+              </p>
+              <Link to="/articles" className="font-sans font-medium text-accent-blue" style={{ fontSize: '15px' }}>
+                ← 返回文章列表
+              </Link>
+            </div>
           ) : (
             <article className="article-body" style={{ maxWidth: 880 }}>
               <ReactMarkdown

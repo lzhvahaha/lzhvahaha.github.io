@@ -118,7 +118,7 @@ function PaperRow({ title, authors, venue, pdf }) {
       className="flex flex-col"
       style={{
         padding: '16px 24px',
-        gap: '6px',
+        gap: '8px',
         borderTop: '1px solid #E5E2D7',
       }}
     >
@@ -183,7 +183,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
   };
 
   return (
-    <nav className="flex items-center justify-center" style={{ gap: 8, marginTop: 10 }}>
+    <nav className="flex items-center justify-center" style={{ gap: 8, marginTop: 12 }}>
       <button
         type="button"
         onClick={() => onPageChange(currentPage - 1)}
@@ -257,7 +257,7 @@ export default function PublicationsSection() {
       </h2>
 
       {/* Body: groups with 14px gap between groups */}
-      <div className="flex flex-col" style={{ gap: 14 }}>
+      <div className="flex flex-col" style={{ gap: 16 }}>
         {publicationsByYear.map(({ year, papers, perPage }, gIdx) => {
           const totalPages = Math.max(1, Math.ceil(papers.length / perPage));
           const currentPage = Math.min(pageStates[gIdx], totalPages);

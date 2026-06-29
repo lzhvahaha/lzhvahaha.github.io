@@ -63,11 +63,11 @@ const groups = [
 
 function TimelineRow({ period, title, desc }) {
   return (
-    <div className="flex flex-col md:flex-row gap-4 md:gap-12 py-[10px] px-2" style={{ borderBottom: '1px solid #E5E2D7' }}>
+    <div className="flex flex-col md:flex-row gap-4 md:gap-8 py-[10px] px-2" style={{ borderBottom: '1px solid #E5E2D7' }}>
       <span className="w-[100px] md:w-[140px] shrink-0 font-serif text-[16px] leading-[150%] text-text-secondary">
         {period}
       </span>
-      <div className="flex flex-col gap-[3px]">
+      <div className="flex flex-col gap-1">
         <h4 className="font-serif text-[19px] leading-[135%] font-semibold text-text-primary">
           {title}
         </h4>
@@ -103,7 +103,7 @@ export default function CVSection() {
     <section id="cv" className="w-full bg-page-bg pt-2 pb-8" style={{ borderTop: '1px solid #E5E2D7' }}>
       <div className="mx-auto max-w-[1200px] px-5 md:px-12 lg:px-[120px]">
         {/* section title */}
-        <h2 className="font-serif text-[32px] leading-[120%] font-semibold text-text-primary mt-5 mb-[14px]">
+        <h2 className="font-serif text-[32px] leading-[120%] font-semibold text-text-primary mt-5 mb-4">
           Education &amp; Experience
         </h2>
 

@@ -56,6 +56,7 @@ function ClickablePostCard({ slug, title, date, tags, excerpt }) {
         borderTop: '1px solid #E5E2D7',
         borderLeft: '1px solid #E5E2D7',
         borderRight: '1px solid #E5E2D7',
+        borderBottom: '1px solid #E5E2D7',
         transition: 'background-color 0.2s ease',
       }}
     >
@@ -94,6 +95,7 @@ function PostCard({ title, date, tags, desc }) {
         borderTop: '1px solid #E5E2D7',
         borderLeft: '1px solid #E5E2D7',
         borderRight: '1px solid #E5E2D7',
+        borderBottom: '1px solid #E5E2D7',
       }}
     >
       <h3
@@ -184,7 +186,6 @@ export default function ArticlesPage() {
             {getPostsSorted().map((post) => (
               <ClickablePostCard key={post.slug} {...post} />
             ))}
-            <div style={{ borderTop: '1px solid #E5E2D7' }} />
           </div>
         </section>
 
@@ -198,7 +199,6 @@ export default function ArticlesPage() {
             {lifeEssays.map((essay, i) => (
               <PostCard key={`life-${i}`} {...essay} />
             ))}
-            <div style={{ borderTop: '1px solid #E5E2D7' }} />
           </div>
         </section>
       </main>

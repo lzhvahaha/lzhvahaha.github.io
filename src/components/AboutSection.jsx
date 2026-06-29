@@ -18,7 +18,7 @@ export default function AboutSection() {
         />
 
         {/* right content */}
-        <div className="flex-1 flex flex-col gap-[18px] max-w-[944px]">
+        <div className="flex-1 flex flex-col gap-4 max-w-[944px]">
           <h1 className="font-serif text-[50px] leading-[115%] font-semibold text-text-primary">
             Zihao Li&nbsp;&nbsp;李子豪
           </h1>
@@ -28,21 +28,22 @@ export default function AboutSection() {
           </p>
 
           {/* contact row */}
-          <div className="flex items-center gap-7 mt-1">
+          <div className="flex flex-wrap items-center gap-6 mt-1">
             {[
-              { label: 'Email', href: 'mailto:lizihao@mail.ustc.edu.cn' },
-              { label: 'ResearchGate', href: 'https://www.researchgate.net/profile/Zihao-Li-94?ev=hdr_xprf' },
-              { label: 'GitHub', href: 'https://github.com/lzhvahaha' },
-              { label: 'ORCID', href: 'https://orcid.org/0009-0007-1095-793X' },
-            ].map(({ label, href }) => (
+              { label: 'Email', href: 'mailto:lizihao@mail.ustc.edu.cn', external: false },
+              { label: 'ResearchGate', href: 'https://www.researchgate.net/profile/Zihao-Li-94?ev=hdr_xprf', external: true },
+              { label: 'GitHub', href: 'https://github.com/lzhvahaha', external: true },
+              { label: 'ORCID', href: 'https://orcid.org/0009-0007-1095-793X', external: true },
+            ].map(({ label, href, external }) => (
               <a
                 key={label}
                 href={href}
-                target={href.startsWith('http') ? '_blank' : undefined}
-                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="font-sans text-[15px] font-medium text-accent-blue"
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener noreferrer' : undefined}
+                className="font-sans text-[15px] font-medium text-accent-blue inline-flex items-center gap-1 transition-colors"
               >
                 {label}
+                <span className="text-xs" style={{ transition: 'transform 0.2s ease' }}>↗</span>
               </a>
             ))}
           </div>

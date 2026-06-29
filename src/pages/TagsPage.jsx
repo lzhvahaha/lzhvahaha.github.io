@@ -206,7 +206,7 @@ export default function TagsPage() {
         </section>
 
         {/* ── Tags Cloud ── */}
-        <section className="flex flex-col px-5 md:px-12 lg:px-[120px]" style={{ paddingTop: 20, paddingBottom: 20, gap: 18 }}>
+        <section className="flex flex-col px-5 md:px-12 lg:px-[120px]" style={{ paddingTop: 20, paddingBottom: 20, gap: 16 }}>
           <header className="flex items-baseline justify-between" style={{ height: 54 }}>
             <h2 className="font-serif font-semibold text-text-primary" style={{ fontSize: '28px', lineHeight: 'normal' }}>全部标签</h2>
             <span className="font-sans font-medium text-accent-blue" style={{ fontSize: '14px', lineHeight: 'normal' }}>
@@ -215,7 +215,7 @@ export default function TagsPage() {
           </header>
 
           {/* tag pills */}
-          <div className="flex flex-wrap items-center" style={{ gap: 14 }}>
+          <div className="flex flex-wrap items-center" style={{ gap: 16 }}>
             {allTags.map((t) => (
               <TagPill
                 key={t.name}
