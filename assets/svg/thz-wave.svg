@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+  <!-- Probe tip: inverted triangle (flat top, point at bottom) -->
+  <path fill="#003B5C" d="M13 4 L27 4 L20 14 Z"/>
+  <!-- THz sine wave (two periods) -->
+  <path fill="none" stroke="#003B5C" stroke-width="2" stroke-linecap="round"
+    d="M4 22 Q8 17, 12 22 T 20 22 T 28 22 T 36 22"/>
+  <!-- Surface line -->
+  <rect fill="#003B5C" x="5" y="31" width="30" height="2.5" rx="1"/>
+</svg>

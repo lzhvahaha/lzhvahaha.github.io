@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+  <!-- Magnetic field lines (arcs above) -->
+  <path fill="none" stroke="#003B5C" stroke-width="1.5" stroke-linecap="round"
+    d="M9 20 Q9 5, 20 5 Q31 5, 31 20"/>
+  <path fill="none" stroke="#003B5C" stroke-width="1.5" stroke-linecap="round"
+    d="M9 20 Q9 11, 20 11 Q31 11, 31 20"/>
+  <path fill="none" stroke="#003B5C" stroke-width="1.5" stroke-linecap="round"
+    d="M9 20 Q9 17, 20 17 Q31 17, 31 20"/>
+  <!-- Magnetic field lines (arcs below) -->
+  <path fill="none" stroke="#003B5C" stroke-width="1.5" stroke-linecap="round"
+    d="M9 20 Q9 35, 20 35 Q31 35, 31 20"/>
+  <path fill="none" stroke="#003B5C" stroke-width="1.5" stroke-linecap="round"
+    d="M9 20 Q9 29, 20 29 Q31 29, 31 20"/>
+  <path fill="none" stroke="#003B5C" stroke-width="1.5" stroke-linecap="round"
+    d="M9 20 Q9 23, 20 23 Q31 23, 31 20"/>
+  <!-- Bar magnet poles (left = N, right = S) -->
+  <rect fill="#003B5C" x="3" y="15" width="7" height="10" rx="1"/>
+  <rect fill="#003B5C" x="30" y="15" width="7" height="10" rx="1"/>
+</svg>

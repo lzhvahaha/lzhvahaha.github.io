@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  background-color: #FAF8F7;
+  color: #1A1A1A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Page container - fixed width as per design */
+.page-container {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #FAF8F7;
+}
+
+.content-padding {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Link hover effects */
+a {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+a:hover {
+  opacity: 0.75;
+}
+
+/* ── Article body typography ── */
+.article-body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #1A1A1A;
+}
+
+.article-body h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 2.2em;
+  margin-bottom: 0.7em;
+  line-height: 1.3;
+}
+
+.article-body h3 {
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  line-height: 1.35;
+}
+
+.article-body h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+}
+
+.article-body p {
+  margin-bottom: 1.1em;
+}
+
+.article-body strong {
+  font-weight: 600;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: 1.1em;
+  padding-left: 1.6em;
+}
+
+.article-body li {
+  margin-bottom: 0.4em;
+}
+
+.article-body blockquote {
+  border-left: 3px solid #003A5C;
+  padding-left: 1em;
+  margin: 1.2em 0;
+  color: #444444;
+  font-style: italic;
+}
+
+.article-body code {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  background-color: #f0ede5;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.article-body pre {
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  background-color: #f7f5f0;
+  border: 1px solid #E5E2D7;
+  border-radius: 4px;
+  padding: 14px 18px;
+  overflow-x: auto;
+  margin-bottom: 1.2em;
+  line-height: 1.6;
+}
+
+.article-body pre code {
+  background: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.4em;
+  font-size: 15px;
+}
+
+.article-body th,
+.article-body td {
+  border: 1px solid #E5E2D7;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.article-body th {
+  background-color: #f7f5f0;
+  font-weight: 600;
+}
+
+.article-body hr {
+  border: none;
+  border-top: 1px solid #E5E2D7;
+  margin: 2em 0;
+}
+
+.article-body a {
+  color: #003A5C;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* KaTeX 公式样式微调 */
+.article-body .katex-display {
+  margin: 1.4em 0;
+  overflow-x: auto;
+}
