@@ -194,9 +194,9 @@ export default function TagsPage() {
     <div className="page-container bg-page-bg">
       <Navbar />
 
-      <main style={{ width: 1440 }}>
+      <main className="w-full max-w-[1200px] mx-auto">
         {/* ── Hero ── */}
-        <section className="flex flex-col" style={{ paddingLeft: 120, paddingRight: 120, paddingTop: 40, paddingBottom: 20, gap: 20 }}>
+        <section className="flex flex-col px-5 md:px-12 lg:px-[120px]" style={{ paddingTop: 40, paddingBottom: 20, gap: 20 }}>
           <h1 className="font-serif font-semibold text-text-primary" style={{ fontSize: '44px', lineHeight: '120%', maxWidth: 308 }}>
             按标签归档
           </h1>
@@ -206,7 +206,7 @@ export default function TagsPage() {
         </section>
 
         {/* ── Tags Cloud ── */}
-        <section className="flex flex-col" style={{ paddingLeft: 120, paddingRight: 120, paddingTop: 20, paddingBottom: 20, gap: 18 }}>
+        <section className="flex flex-col px-5 md:px-12 lg:px-[120px]" style={{ paddingTop: 20, paddingBottom: 20, gap: 18 }}>
           <header className="flex items-baseline justify-between" style={{ height: 54 }}>
             <h2 className="font-serif font-semibold text-text-primary" style={{ fontSize: '28px', lineHeight: 'normal' }}>全部标签</h2>
             <span className="font-sans font-medium text-accent-blue" style={{ fontSize: '14px', lineHeight: 'normal' }}>
@@ -228,7 +228,7 @@ export default function TagsPage() {
         </section>
 
         {/* ── Archives — paginated, max 8 per page ── */}
-        <section className="flex flex-col" style={{ paddingLeft: 120, paddingRight: 120, paddingTop: 20, paddingBottom: 40, gap: 24 }}>
+        <section className="flex flex-col px-5 md:px-12 lg:px-[120px]" style={{ paddingTop: 20, paddingBottom: 40, gap: 24 }}>
           {/* selected tag heading */}
           <h2
             className="font-serif font-semibold text-accent-blue"

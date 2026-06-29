@@ -5,6 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     extend: {
       colors: {
         'page-bg': '#FAF8F7',
@@ -22,7 +28,11 @@ export default {
       maxWidth: {
         'content': '1200px',
         'page': '1440px',
-      }
+      },
+      spacing: {
+        'content-x': '120px',
+        'section-y': '80px',
+      },
     },
   },
   plugins: [],

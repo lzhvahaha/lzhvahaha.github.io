@@ -245,10 +245,9 @@ export default function PublicationsSection() {
         paddingTop: 20,
         paddingBottom: 20,
         gap: 12,
-        paddingLeft: 120,
-        paddingRight: 120,
       }}
     >
+      <div className="mx-auto max-w-[1200px] w-full px-5 md:px-12 lg:px-[120px] flex flex-col" style={{ gap: 12 }}>
       {/* Section title */}
       <h2
         className="font-serif font-semibold text-text-primary"
@@ -297,6 +296,7 @@ export default function PublicationsSection() {
             </div>
           );
         })}
+      </div>
       </div>
     </section>
   );

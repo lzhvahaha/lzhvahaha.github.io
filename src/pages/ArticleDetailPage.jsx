@@ -39,7 +39,7 @@ export default function ArticleDetailPage() {
     return (
       <div className="page-container bg-page-bg">
         <Navbar />
-        <main style={{ width: 1440, paddingLeft: 120, paddingRight: 120, paddingTop: 80, paddingBottom: 80 }}>
+        <main className="w-full max-w-[1200px] mx-auto px-5 md:px-12 lg:px-[120px]" style={{ paddingTop: 80, paddingBottom: 80 }}>
           <p className="font-serif text-text-secondary" style={{ fontSize: '20px' }}>
             文章不存在。
           </p>
@@ -56,11 +56,11 @@ export default function ArticleDetailPage() {
     <div className="page-container bg-page-bg">
       <Navbar />
 
-      <main style={{ width: 1440 }}>
+      <main className="w-full max-w-[1200px] mx-auto">
         {/* ── 文章头部 ── */}
         <section
-          className="flex flex-col"
-          style={{ paddingLeft: 120, paddingRight: 120, paddingTop: 48, paddingBottom: 24, gap: 16 }}
+          className="flex flex-col px-5 md:px-12 lg:px-[120px]"
+          style={{ paddingTop: 48, paddingBottom: 24, gap: 16 }}
         >
           {/* 返回链接 */}
           <Link
@@ -89,11 +89,12 @@ export default function ArticleDetailPage() {
         </section>
 
         {/* ── 分隔线 ── */}
-        <div style={{ borderTop: '1px solid #E5E2D7', marginLeft: 120, marginRight: 120 }} />
+        <div className="mx-5 md:mx-12 lg:mx-[120px]" style={{ borderTop: '1px solid #E5E2D7' }} />
 
         {/* ── 正文 ── */}
         <section
-          style={{ paddingLeft: 120, paddingRight: 120, paddingTop: 32, paddingBottom: 60 }}
+          className="px-5 md:px-12 lg:px-[120px]"
+          style={{ paddingTop: 32, paddingBottom: 60 }}
         >
           {loading ? (
             <p className="font-serif text-text-secondary" style={{ fontSize: '16px' }}>

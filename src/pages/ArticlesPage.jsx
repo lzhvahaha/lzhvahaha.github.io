@@ -151,11 +151,11 @@ export default function ArticlesPage() {
     <div className="page-container bg-page-bg">
       <Navbar />
 
-      <main style={{ width: 1440 }}>
+      <main className="w-full max-w-[1200px] mx-auto">
         {/* ── Hero ── */}
         <section
-          className="flex flex-col"
-          style={{ paddingLeft: 120, paddingRight: 120, paddingTop: 60, paddingBottom: 20, gap: 20 }}
+          className="flex flex-col px-5 md:px-12 lg:px-[120px]"
+          style={{ paddingTop: 60, paddingBottom: 20, gap: 20 }}
         >
           <h1
             className="font-serif font-semibold text-text-primary"
@@ -176,8 +176,8 @@ export default function ArticlesPage() {
 
         {/* ── 最新文章（真实文章，可点击跳转） ── */}
         <section
-          className="flex flex-col"
-          style={{ paddingLeft: 120, paddingRight: 120, paddingTop: 20, paddingBottom: 20, gap: 0 }}
+          className="flex flex-col px-5 md:px-12 lg:px-[120px]"
+          style={{ paddingTop: 20, paddingBottom: 20, gap: 0 }}
         >
           <SectionHeader title="最新文章" moreHref="/tags" />
           <div className="flex flex-col" style={{ gap: 0 }}>
@@ -190,8 +190,8 @@ export default function ArticlesPage() {
 
         {/* ── 生活随笔 ── */}
         <section
-          className="flex flex-col"
-          style={{ paddingLeft: 120, paddingRight: 120, paddingTop: 20, paddingBottom: 40, gap: 0 }}
+          className="flex flex-col px-5 md:px-12 lg:px-[120px]"
+          style={{ paddingTop: 20, paddingBottom: 40, gap: 0 }}
         >
           <SectionHeader title="生活随笔" moreHref="/tags" />
           <div className="flex flex-col" style={{ gap: 0 }}>

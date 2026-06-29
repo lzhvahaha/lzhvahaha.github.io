@@ -17,7 +17,7 @@ export default function Navbar() {
   if (!isArticlesPage && !isTagsPage) {
     return (
       <nav
-        className="w-[1440px] h-[71px] bg-white flex items-center justify-between px-[120px]"
+        className="w-full max-w-[1200px] mx-auto h-[71px] bg-white flex items-center justify-between px-5 md:px-12 lg:px-[120px]"
         style={{ borderBottom: '1px solid #E5E2D7' }}
       >
         <span className="font-serif text-[20px] font-semibold text-text-primary">
@@ -37,7 +37,7 @@ export default function Navbar() {
   /* ---------- articles/tags page nav ---------- */
   return (
     <nav
-      className="w-[1440px] h-[79px] bg-white flex items-center justify-between px-[120px]"
+      className="w-full max-w-[1200px] mx-auto h-[79px] bg-white flex items-center justify-between px-5 md:px-12 lg:px-[120px]"
       style={{ borderBottom: '1px solid #E5E2D7' }}
     >
       <Link to="/" className="font-serif text-[20px] font-semibold text-text-primary">

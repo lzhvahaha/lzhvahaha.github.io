@@ -17,11 +17,10 @@ export default function Footer() {
       }}
     >
       <div
-        className="mx-auto flex items-baseline justify-between"
+        className="mx-auto flex flex-col sm:flex-row items-baseline justify-between gap-2 px-5 md:px-12 lg:px-[120px]"
         style={{
-          width: 1440,
-          paddingLeft: 120,
-          paddingRight: 120,
+          maxWidth: '1200px',
+          width: '100%',
           paddingTop: 28,
           paddingBottom: 24,
         }}

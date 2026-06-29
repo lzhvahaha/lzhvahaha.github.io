@@ -24,7 +24,7 @@ export default function HomePage() {
   return (
     <div className="page-container bg-page-bg">
       <Navbar />
-      <main style={{ width: 1440 }}>
+      <main className="w-full max-w-[1200px] mx-auto">
         <AboutSection />
         <CVSection />
         <ResearchSection />

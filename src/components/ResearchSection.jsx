@@ -36,10 +36,9 @@ const researchCards = [
 function ResearchCard({ icon, title, desc }) {
   return (
     <article
-      className="bg-white rounded-sm"
+      className="bg-white rounded-sm w-full"
       style={{
         border: '1px solid #E5E2D7',
-        width: 560,
         padding: '14px 18px',
       }}
     >
@@ -63,13 +62,13 @@ export default function ResearchSection() {
   return (
     <section id="research" className="w-full bg-page-bg pt-2 pb-4" style={{ borderTop: '1px solid #E5E2D7' }}>
       {/* heading */}
-      <div style={{ width: 1440, paddingLeft: 120, paddingRight: 120 }}>
+      <div className="mx-auto max-w-[1200px] px-5 md:px-12 lg:px-[120px]">
         <h2 className="font-serif text-[32px] leading-[120%] font-semibold text-text-primary mb-3 mt-3">
           Research Directions
         </h2>
 
-        {/* grid */}
-        <div className="flex flex-wrap gap-4">
+        {/* grid: 1 col mobile, 2 cols desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {researchCards.map((card, i) => (
             <ResearchCard key={i} {...card} />
           ))}

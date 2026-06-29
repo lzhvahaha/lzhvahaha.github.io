@@ -8,12 +8,12 @@ import avatarUrl from '../../assets/images/3_13.png';
 export default function AboutSection() {
   return (
     <section id="about" className="w-full bg-page-bg pt-7 pb-6">
-      <div className="mx-auto flex gap-14" style={{ width: 1440, paddingLeft: 120, paddingRight: 120 }}>
+      <div className="mx-auto flex flex-col md:flex-row gap-8 md:gap-12 px-5 md:px-12 lg:px-[120px] max-w-[1200px]">
         {/* avatar */}
         <img
           src={avatarUrl}
           alt="李子豪"
-          className="w-[200px] h-[200px] rounded-full object-cover shrink-0"
+          className="w-32 h-32 md:w-[200px] md:h-[200px] rounded-full object-cover shrink-0"
           style={{ clipPath: 'circle(50%)' }}
         />
 
