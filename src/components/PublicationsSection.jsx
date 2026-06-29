@@ -15,47 +15,56 @@ const publicationsByYear = [
       {
         title: 'Isolated scan unit and scanning tunneling microscope for stable imaging in ultra-high magnetic fields',
         authors: 'Jihao Wang*, Zihao Li*, ..., Qingyou Lu',
-        venue: 'Ultramicroscopy'
+        venue: 'Ultramicroscopy',
+        pdf: '/pdfs/01-isolated-scan-stm.pdf'
       },
       {
         title: 'A Compact Piezo-Drive Rotatable Scanning Tunneling Microscope in a 12T Cryogen-Free Magnet',
         authors: 'JunWei Liu, Zihao Li, ..., Qingyou Lu',
-        venue: 'Microscopy Research and Technique'
+        venue: 'Microscopy Research and Technique',
+        pdf: '/pdfs/02-compact-rotatable-stm.pdf'
       },
       {
         title: 'Stabilization of nanoscale magnetic bubbles in zero magnetic field by rotatable magnetic force microscopy',
         authors: 'Min Zhang, Zihao Li, ..., Qingyou Lu',
-        venue: 'Micron'
+        venue: 'Micron',
+        pdf: '/pdfs/03-magnetic-bubbles-mfm.pdf'
       },
       {
         title: 'An ultra-compact piezoelectric motor with self-satisfied symmetry for enhanced performance',
         authors: 'Yalong Yang, Shengxin Cheng, Qingyou Lu, Zihao Li, ...',
-        venue: 'Review of Scientific Instruments'
+        venue: 'Review of Scientific Instruments',
+        pdf: '/pdfs/04-ultra-compact-piezo-motor.pdf'
       },
       {
         title: 'Compact Design, Construction, and Evaluation of an in Situ ±90° Rotatable Magnetic Force Microscope in a 12 T Superconducting Magnet',
         authors: 'Min Zhang, Shuai Dong, Zihao Li, ..., Qingyou Lu',
-        venue: 'Ultramicroscopy'
+        venue: 'Ultramicroscopy',
+        pdf: '/pdfs/05-rotatable-mfm-12t.pdf'
       },
       {
         title: 'Optimized Fabrication and Characterization of W Tips for High-Performance Atomic-Resolution Scanning Tunneling Microscope',
         authors: 'Esmaeilzadeh Behnam, Minghao Chen, Zihao Li, ..., Qingyou Lu',
-        venue: 'Chinese Journal of Chemical Physics'
+        venue: 'Chinese Journal of Chemical Physics',
+        pdf: '/pdfs/06-w-tips-stm.pdf'
       },
       {
         title: '35 T water-cooled magnet scanning tunneling microscope for in-plane magnetic field measurement',
         authors: 'Dan Wu, Jihao Wang, Shuai Dong, Zihao Li, ..., Qingyou Lu',
-        venue: 'Review of Scientific Instruments'
+        venue: 'Review of Scientific Instruments',
+        pdf: '/pdfs/07-35t-water-cooled-stm.pdf'
       },
       {
         title: 'Lattice-Driven Topological Spin Textures in Cr₂Ge₂Te₆ Single Crystals',
         authors: 'Shuai Dong, Caihong Xie, Yuying Bai, Aile Wang, Zihao Li, ..., Qingyou Lu, Qiyuan Feng',
-        venue: 'Advanced Functional Materials'
+        venue: 'Advanced Functional Materials',
+        pdf: '/pdfs/08-cr2ge2te6-spin-textures.pdf'
       },
       {
         title: 'Cryogenic magnetic force microscopy at 35 T and Sub-3 K in a water-cooled magnet',
         authors: 'Shuai Dong*, Kesen Zhao*, Min Zhang*, Zihao Li, ..., Qingyou Lu, Wenjie Meng',
-        venue: 'Review of Scientific Instruments'
+        venue: 'Review of Scientific Instruments',
+        pdf: '/pdfs/09-cryogenic-mfm-35t.pdf'
       }
     ]
   },
@@ -66,38 +75,44 @@ const publicationsByYear = [
       {
         title: '一种基于相向运动减小摩擦力原理的二维压电马达及其使用方法',
         authors: '李子豪, …, 陆轻铀',
-        venue: '已授权'
+        venue: '已授权',
+        pdf: '/pdfs/P01-opposing-motion-piezo-motor.pdf'
       },
       {
         title: '一种通孔冷壁矢量磁体结构及强磁场太赫兹近场测量系统',
         authors: '李子豪, …, 陆轻铀, 陆亚林',
-        venue: '实质审查'
+        venue: '实质审查',
+        pdf: '/pdfs/P02-vector-magnet-thz-nearfield.pdf'
       },
       {
         title: '扫描探针显微镜的探针步进扫描一体组件及步进扫描方法',
         authors: '李子豪, …, 陆轻铀',
-        venue: '已授权'
+        venue: '已授权',
+        pdf: '/pdfs/P03-probe-step-scan-integrated.pdf'
       },
       {
         title: '一种针尖对针尖成像的扫描探针测量装置及控制方法',
         authors: '李子豪, …, 陆轻铀',
-        venue: '实质审查'
+        venue: '实质审查',
+        pdf: '/pdfs/P04-tip-to-tip-spm.pdf'
       },
       {
         title: '压电弯曲形变惯性步进器、步进扫描器及扫描探针显微镜',
         authors: '陆轻铀, 杨奥翔, 李子豪, …',
-        venue: '已授权'
+        venue: '已授权',
+        pdf: '/pdfs/P05-piezo-bending-inertia-stepper.pdf'
       },
       {
         title: '四 XYZ 压电管并排驱动的多维压电马达及控制方法',
         authors: 'Syed Asad Maqbool, 陆轻铀, 李子豪, …',
-        venue: '实质审查'
+        venue: '实质审查',
+        pdf: '/pdfs/P06-xyz-piezo-tube-multi-axis-motor.pdf'
       }
     ]
   }
 ];
 
-function PaperRow({ title, authors, venue }) {
+function PaperRow({ title, authors, venue, pdf }) {
   return (
     <article
       className="flex flex-col"
@@ -111,7 +126,19 @@ function PaperRow({ title, authors, venue }) {
         className="font-serif font-semibold text-text-primary"
         style={{ fontSize: '19px', lineHeight: '135%' }}
       >
-        {title}
+        {pdf ? (
+          <a
+            href={pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-accent-blue"
+            style={{ color: 'inherit', textDecoration: 'none', cursor: 'pointer' }}
+          >
+            {title}
+          </a>
+        ) : (
+          title
+        )}
       </h4>
       {/* Authors and venue on the same line, venue shifted right a bit */}
       <div className="flex items-baseline" style={{ gap: 16 }}>
